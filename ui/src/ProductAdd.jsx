@@ -17,7 +17,8 @@ export default class ProductAdd extends React.Component {
     const form = document.forms.productAdd;
 
     const product = {
-      productName: form.productName.value, pricePerUnit: form.pricePerUnit.value.substr(1), category: form.category.value, imageUrl: form.imageUrl.value,
+      // pricePerUnit: form.pricePerUnit.value.substr(1)
+      productName: form.productName.value, pricePerUnit: form.pricePerUnit.value, category: form.category.value, imageUrl: form.imageUrl.value,
     };
 
     const { createProduct } = this.props;
@@ -29,24 +30,23 @@ export default class ProductAdd extends React.Component {
     form.imageUrl.value = '';
   }
 
-
   render() {
     return (
       <Form inline name="productAdd" onSubmit={this.handleSubmit}>
-      <FormGroup>
-        <ControlLabel>Owner:</ControlLabel>
+        <FormGroup>
+          <ControlLabel>Owner:</ControlLabel>
+          {' '}
+          <FormControl type="text" name="owner" />
+        </FormGroup>
         {' '}
-        <FormControl type="text" name="owner" />
-      </FormGroup>
-      {' '}
-      <FormGroup>
-        <ControlLabel>Title:</ControlLabel>
+        <FormGroup>
+          <ControlLabel>Title:</ControlLabel>
+          {' '}
+          <FormControl type="text" name="title" />
+        </FormGroup>
         {' '}
-        <FormControl type="text" name="title" />
-      </FormGroup>
-      {' '}
-      <Button bsStyle="primary" type="submit">Add</Button>
-    </Form>
+        <Button bsStyle="primary" type="submit">Add</Button>
+      </Form>
     );
   }
 }

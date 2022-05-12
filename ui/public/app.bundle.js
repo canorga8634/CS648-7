@@ -334,7 +334,7 @@ var ProductAddNavItem = /*#__PURE__*/function (_React$Component) {
 
               case 6:
                 form.productName.value = '';
-                form.pricePerUnit.value = '$';
+                form.pricePerUnit.value = '';
                 form.category.value = 'Shirts';
                 form.imageUrl.value = '';
 

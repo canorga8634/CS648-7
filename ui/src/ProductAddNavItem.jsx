@@ -68,7 +68,7 @@ class ProductAddNavItem extends React.Component {
             }
           }`;
 
-    const data = await graphQLFetch(query, { product },  this.showError);
+    const data = await graphQLFetch(query, { product }, this.showError);
     if (data) {
       this.loadData();
     }
@@ -86,7 +86,7 @@ class ProductAddNavItem extends React.Component {
     await this.createProduct(product);
 
     form.productName.value = '';
-    form.pricePerUnit.value = '$';
+    form.pricePerUnit.value = '';
     form.category.value = 'Shirts';
     form.imageUrl.value = '';
   }
